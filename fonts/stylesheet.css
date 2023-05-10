@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Bold.eot');
+    src: local('Qanelas Bold'), local('Qanelas-Bold'),
+        url('Qanelas-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Qanelas-Bold.woff2') format('woff2'),
+        url('Qanelas-Bold.woff') format('woff'),
+        url('Qanelas-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-SemiBold.eot');
+    src: local('Qanelas SemiBold'), local('Qanelas-SemiBold'),
+        url('Qanelas-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Qanelas-SemiBold.woff2') format('woff2'),
+        url('Qanelas-SemiBold.woff') format('woff'),
+        url('Qanelas-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Medium.eot');
+    src: local('Qanelas Medium'), local('Qanelas-Medium'),
+        url('Qanelas-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Qanelas-Medium.woff2') format('woff2'),
+        url('Qanelas-Medium.woff') format('woff'),
+        url('Qanelas-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Regular.eot');
+    src: local('Qanelas Regular'), local('Qanelas-Regular'),
+        url('Qanelas-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Qanelas-Regular.woff2') format('woff2'),
+        url('Qanelas-Regular.woff') format('woff'),
+        url('Qanelas-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('../fonts/Switzer-Semibold.woff2') format('woff2'),
+         url('../fonts/Switzer-Semibold.woff') format('woff'),
+         url('../fonts/Switzer-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Caveat';
+    src: url('Caveat-Regular.eot');
+    src: local('Caveat Regular'), local('Caveat-Regular'),
+        url('Caveat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Caveat-Regular.woff') format('woff'),
+        url('Caveat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

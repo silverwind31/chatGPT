@@ -1,0 +1,1906 @@
+html{
+    scroll-behavior: smooth;
+}
+*,p,ul,ol,li,div,span{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Qanelas';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    background-color: #fff;
+}
+
+.caveat{
+    font-family: 'Caveat';
+    font-style: normal;
+}
+.wrapper{
+    overflow: hidden;    
+    position: relative;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.text_center{
+    text-align: center;
+}
+.title.small{    
+    font-size: 48px;
+    line-height: 56px;
+}
+.title{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    padding: 8px 0 20px 0;
+}
+.phone_telegram{
+    width: 329px;
+    height: 663px;
+}
+.link-blue{
+    color: #2F55D4 !important;
+}
+/* INDEX */
+
+/* header */
+header{
+    padding: 36px 0;
+}
+header .header_row{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
+header .header_row .header_left{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+header .header_row .header_nav{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center;
+}
+.header_nav a{
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000;
+}
+.header_nav.kurs a{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+}
+header .header_row ul li{
+    display: block;
+}
+header .header_row ul li:last-child{
+    display: none;
+    cursor: pointer;
+}
+header .header_row ul li:last-child svg{
+    border-radius: 6px;    
+}
+header .header_row ul li:last-child{    
+    flex-direction: column;
+    gap: 5px;    
+}
+header .header_row ul li:last-child svg:last-child{
+    width: 16px;
+    transition: .3s width ease;
+}
+header .header_row ul li:last-child svg:nth-child(2){    
+    transition: .2s all ease;
+}
+header .header_row ul li:last-child.open svg:first-child{
+    rotate: 45deg;
+    transform: translate(5px, 5px);
+    transition: .2s all ease;
+}
+header .header_row ul li:last-child.open svg:nth-child(2){
+    width: 0px;
+    overflow: hidden;
+    transition: .2s all ease;
+}
+header .header_row ul li:last-child.open svg:last-child{    
+    width: 20px;
+    rotate: -45deg;
+    transform: translate(5px, -5px);
+    transition: .2s rotate ease,
+                .2s transform ease,
+                .3s width ease;
+}
+header.fixed{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+header .mobile_menu{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F7F8FD;
+    z-index: 10;
+    padding: 24px;
+}
+header .mobile_menu .slider2{
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+header .mobile_menu ul{
+    list-style: none;
+    padding: 24px 0 24px 10px;
+}
+header .mobile_menu ul li{
+    padding-bottom: 23px;
+}
+header .mobile_menu ul li:last-child{
+    padding-bottom: 0;
+}
+header .mobile_menu ul li a{
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    display: block;
+    border-radius: 12px;
+    padding: 0px 24px 0px 24px;
+    transition: padding .4s ease,
+                text-decoration .2s ease,
+                background .2s ease,
+                color .2s ease;
+    color: #000;
+}
+header .mobile_menu ul li a:hover{
+    text-decoration: underline;
+    padding: 9px 24px 13px 24px;
+    background: #2F55D4;
+    color: #fff;
+}
+header .mobile_menu .divider_line{
+    width: 100%;
+    display: flex;
+    height: 1.5px;
+    background-color: #2F55D4;
+}
+header .mobile_menu .telegram_link{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #2F55D4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 0 0 35px;
+}
+
+main.p-top{
+    padding: 62px 0 0 0;
+}
+/* ChatGPT в России */
+.hero{
+    background-color: #F7F8FD;
+    padding: 108px 0 164px 0;
+}
+.hero .hero_row{
+    display: flex;
+    align-items: center;
+    gap: 187px;
+}
+.sub_title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.02em;    
+    color: #BCBCBC;
+    position: relative;
+    margin-left: 22px;
+}
+.sub_title::after{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #BCBCBC;
+}
+.sub_title::before{
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url(img/sub_title_before.svg);
+    background-repeat: no-repeat;
+    left: -22px;
+    transform: translate(0%, -50%);
+}
+.hero_row .title{
+    padding: 8px 0 24px 0;
+}
+.hero_row .desc{
+    padding: 0 0 48px 0;
+}
+.btn_{
+    display: flex;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #F7F8FD;
+    padding: 16px 20px;
+    background: #5776DC;
+    border: 2px solid #2F55D4;
+    box-shadow: 4px 4px 0px #2F55D4;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hero_row .btn_{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+/* Возмощности */
+.possibility{
+    padding: 72px 0;    
+}
+.possibility .possibility_row{
+    display: flex;
+    gap: 63px;
+    padding: 72px 0 0 0;
+    align-items: flex-start;
+}
+.possibility_row .about_block{
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 48px;
+    padding: 24px 0 0 0;
+}
+.about_block .about_item{
+    width: calc(50% - 24px);
+    position: relative;
+    padding-left: 51px;
+}
+.about_block .about_item .about_title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #2F55D4;
+    padding: 0 0 8px 0;
+}
+.about_block .about_item .about_desc{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.about_block .about_item img{
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+/* ChatGPT в Telegram */
+.telegram{
+    padding: 72px 0;
+    background-color: #F7F8FD;
+}
+.telegram .telegram_row{
+    display: flex;
+    gap: 72px;
+    padding: 72px 0 0 0;
+}
+.telegram .telegram_row .telegram_item{
+    padding:0 0 24px 0;
+}
+.telegram_item .telegram_title{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+    padding: 0 0 11px 0;
+}
+.telegram_item .telegram_title span{
+    color: #2F55D4;
+}
+.telegram .telegram_row a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.02em;
+    color: #2F55D4;    
+}
+/* Курсы ChatGPT */
+.courses{
+    padding: 72px 0;    
+}
+.courses .courses_row{
+    display: flex;
+    gap: 48px;
+    padding: 64px 0 56px 0;
+}
+.slides .slide{        
+    border-radius: 12px;
+    border: 4px solid transparent;
+    box-shadow: 8px 8px 0px transparent;    
+}
+.slides .slide.bordered{
+    border-color: #2F55D4;
+    box-shadow: 8px 8px 0px #2F55D4;
+}
+.slides .slide .slide_head{
+    padding: 32px 63px 32px 28px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;       
+    position: relative;
+    cursor: pointer;
+}
+.slide_head.blue{
+    font-weight: 600;
+    color: #2F55D4;        
+    transition: .3s all ease;
+}
+.slides .slide .slide_head::before{    
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    right: 22px;
+    border-radius: 50%;
+    background-image: url(img/accordion_btn.svg);
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.slides .slide .slide_body{
+    padding: 24px 32px 32px 32px ;
+    display: none;    
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 0 32px;
+}
+.slides .slide .slide_body li{
+    font-size: 18px;
+    line-height: 28px;
+}
+.slides .slide .slide_head::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 13px;
+    right: 37px;
+    background-image: url(img/accordion_btn_line.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    transition: .3s all ease;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.slides .slide.bordered .slide_head::after{
+    opacity: 0;
+}
+.courses .certificat .tooltip_{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2F55D4;
+    background: rgba(47, 85, 212, 0.1);
+    border: 4px solid rgba(47, 85, 212, 0.3);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    width: 492px;
+}
+.courses .certificat .tooltip_::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    width: 26px;
+    height: 13px;
+    background-image: url(img/triangle.svg);
+    background-repeat: no-repeat;
+    transform: translate(0%, -130%);
+}
+.courses .sale{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 32px 32px 53px;
+    border: 4px solid rgba(47, 85, 212, 0.5);
+    box-shadow: 8px 8px 0px rgba(47, 85, 212, 0.5);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+}
+.courses .sale .prices{
+    display: flex;
+    gap: 33px;
+    font-weight: 600;
+    margin-top: 10px;
+    align-items: center;
+}
+.courses .sale .prices .old_price{
+    font-size: 36px;
+    line-height: 42px;
+    color: #404040;
+    text-decoration: line-through;
+}
+.courses .sale .prices .sale_price{
+    font-size: 44px;
+    line-height: 48px;
+    color: #FF0000;
+}
+.btn_.btn_sircle{
+    color: #fff;
+    background: #2F55D4;
+    border: 3px solid #2F55D4;
+    box-shadow: 4px 4px 0px rgba(47, 85, 212, 0.75);
+    border-radius: 52px;    
+}
+
+/* Все тарифы */
+.rates{
+    padding: 72px 0 92px 0;
+    background-color: #F7F8FD;
+}
+.rates .rates_row{
+    padding: 62px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.rates .rates_row .rate{    
+    background: #FFFFFF;
+    padding: 32px;
+    border: 1px solid rgba(47, 85, 212, 0.4);
+    border-radius: 12px;
+    width: calc(33.33% - 12px);    
+    transition: background .2s ease-in-out,
+                border .2s ease-out,                              
+                box-shadow .5s linear;
+}
+.rates .rates_row .rate:hover{        
+    background: rgba(47, 85, 212, 0.1);
+    border:4px solid rgba(47, 85, 212, 0.5);
+    box-shadow: 12px 12px 0px #2F55D4;    
+}
+.rates_row .rate .rate_header{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 0 0 40px 0;
+}
+.rates_row .rate .rate_header svg{
+    background: rgba(47, 85, 212, 0.08);
+    border: 1px solid rgba(47, 85, 212, 0.16);
+    border-radius: 50%;
+    padding: 11px;
+    width: 56px;
+    height: 56px;
+    transition: .2s all ease;
+}
+.rates_row .rate .rate_header svg path{
+    stroke: #2F55D4;
+    transition: .2s all ease;
+}
+.rates_row .rate:hover .rate_header svg{
+    background: #2F55D4;
+    border-color: rgba(255, 255, 255, 0.16);
+}
+.rates_row .rate:hover .rate_header svg path{
+    stroke: #fff;
+}
+.rates_row .rate .rate_price{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 69px;
+    padding: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.rates_row .rate .rate_price span{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;    
+}
+.rates_row .rate ul{
+    padding: 0 0 40px 0;
+}
+.rates_row .rate ul li{
+    padding: 0 0 20px 46px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    list-style: none;
+    position: relative;
+}
+.rates_row .rate ul li:last-child{
+    padding-bottom: 0;
+}
+.rates_row .rate ul li::after{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    left: 0;
+    top: 0;
+    background-image: url(img/li_vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .3s all ease;
+}
+.rates_row .rate:hover ul li::after{
+    background-image: url(img/hover_li_vector.svg);
+}
+.rates_row .rate ul li::before{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    background-color: rgba(47, 85, 212, 0.08);
+    background-repeat: no-repeat;
+    transition: .3s all ease;
+}
+.rates_row .rate:hover ul li::before{
+    background-color: #2F55D4;
+}
+.rates_row .rate .btn_.btn_white{  
+    padding: 16px 32px;  
+    color: #2F55D4;
+    display: inline-flex;
+    background: #FFFFFF;
+    border: 3px solid #2F55D4;    
+    border-radius: 52px;
+    transition: .3s all ease;
+}
+.rates_row .rate:hover .btn_.btn_white{
+    color: #FFFFFF;
+    background: #2F55D4;
+    box-shadow: none;
+}
+.rate .btn_.btn_white svg circle{
+    stroke: #2F55D4;
+    transition: .3s all ease;
+}
+.rate:hover .btn_.btn_white svg circle{
+    stroke: #fff;
+}
+
+/* Любимый продуктом людей */
+.comments{
+    padding: 72px 0;
+}
+.comments .comments_row{
+    display: flex;    
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 72px 0 0 0;
+}
+.comments_row .comment{
+    width: calc(33.33% - 13.33px);
+    padding: 24px 36px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;    
+}
+.comments_row .comment .comment_body{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 0 32px 0;
+}
+.comments_row .comment .user{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.comment .user .user_photo{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+.comment .user .user_name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 0 2px 0;
+}
+.comment .user span{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #474747;
+}
+
+/* footer */
+
+footer{
+    padding: 42px 0;
+    background-color: #202942;  
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; 
+    color: #fff; 
+}
+footer .privacy{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Курс */
+.price{
+    padding: 48px 0 69px 0;
+}
+.header_left .breadcrumb{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+}
+.header_left .breadcrumb::before{
+    position: absolute;
+    content: "";
+    height: 52px;
+    width: 1px;
+    background-color: #000;
+    top: 0;
+    left: -24px;
+}
+.price .price_row{
+    gap: 116px;
+    display: flex;
+    align-items: flex-start;
+}
+.price .price_right {
+    width: 62%;
+}
+.price .price_right ul{
+    padding: 28px 0 28px 30px;
+    list-style: none;
+}
+.price .price_right ul li{
+    position: relative;
+    line-height: 28px;
+}
+.price .price_right ul li::after{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    top: 44%;
+    left: -15px;
+    background-color: #000;
+}
+.price .price_right .concept{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(224, 224, 224, 0.75);
+    border: 1px solid rgba(224, 224, 224, 0.75);
+    border-radius: 16px;
+    margin: 0 0 28px 0;
+}
+.price .price_right .table_{
+    display: flex;
+    align-items: stretch;    
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.price_right .table_ .table_col{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+}
+.price_right .table_ .table_td{
+    text-align: center;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.8;
+}
+.price_right .table_ .table_td:first-child{
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 1;
+}
+.slider2{
+    padding: 0 32px 32px 32px;
+    border: 4px solid rgba(47, 85, 212, 0.8);
+    box-shadow: 8px 8px 0px #2F55D4;
+    border-radius: 12px;
+    width: 38%;
+}
+.slider2 .slide{
+    margin: 0 0 18px 0;  
+    border-bottom: 1px solid #E0E0E0;  
+}
+.slider2 .slide:last-child{
+    margin: 0;
+}
+.slider2 .slide .slide_head{
+    font-weight: 500;
+    padding: 24px 12px 24px 35px;
+    font-size: 20px;
+    line-height: 27px;
+    background-image: url(img/slide_bg.svg);
+    background-repeat: no-repeat;
+    background-position: left 26px;
+    position: relative;
+    transition: .3s all ease;
+    cursor: pointer;
+}
+.mobile_menu .slider2 .slide .slide_head::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    background: rgba(47, 85, 212, 0.1);
+    border-radius: 6px;
+    width: 34px;
+    height: 34px;
+    transform: translate(35%, -30%);
+}
+.slider2 .slide .slide_head.blue{
+    font-weight: 600;
+    font-size: 24px;
+    color: #2F55D4;
+}
+.slider2 .slide .slide_head::after{
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    right: 0;
+    top: 50%;
+    border-top: 1.5px solid #000;
+    border-right: 1.5px solid #000;
+    rotate: x 180deg;
+    transform: rotate(-45deg);
+    transition: .3s all ease;
+}
+.slider2 .slide .slide_head.blue::after{
+    border-color: #2F55D4;
+    width: 10px;
+    height: 10px;
+    rotate: x 0deg;
+    top: 55%;
+}
+.slider2 .slide:last-child .slide_head{
+    padding-bottom: 0;
+}
+.slider2 .slide .slide_head span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 8px 0 0 0;
+    color: #7C7C7C;
+}
+.slider2 .slide .slide_head span.time{
+    position: relative;
+    padding-right: 20px;
+    margin-left: -34px;
+}
+.slider2 .slide .slide_head span.time::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    right: 4px;
+    top: 40%;
+    border-radius: 50%;
+    background-color: #7C7C7C;
+}
+.slider2 .slide .slide_body{
+    padding: 0 0 24px 32px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+}
+.slider2 .slide .slide_body ul{
+    list-style: none;
+}
+.slider2 .slide .slide_body ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 0 0 22px;
+    margin: 0 0 6px 0;
+    position: relative;
+}
+.slider2 .slide .slide_body ul li div{
+    color: #7C7C7C;
+}
+.slider2 .slide .slide_body ul li.invalid div{
+    color: #000000;
+}
+.slider2 .slide .slide_body ul li.current div{
+    color: #2F55D4;
+}
+.slider2 .slide .slide_body ul li::before{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    top: 45%;
+    left: 0;
+    background-color: #7C7C7C;
+}
+.slider2 .slide .slide_body ul li.invalid::before{
+    background-color: #000000;
+}
+.slider2 .slide .slide_body ul li.current::before{
+    background-color: #7C7C7C;;
+}
+.slider2 .slide .slide_body ul li:last-child{
+    margin: 0;
+}
+.slider2 .slide .slide_body ul li span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #7C7C7C;
+}
+.price .price_right .buttons{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 43px 0 0 0;
+}
+.price_right .buttons .btn_{    
+    background: rgba(47, 85, 212, 0.8);
+}
+.price_right .buttons .btn_:last-child img{
+    rotate: 180deg;
+}
+
+/* NO ACCESS */
+.no_access .price_row{
+    gap: 72px;
+}
+.no_access .price_right{
+    text-align: center;
+}
+.no_access .price_right .buttons{
+    justify-content: center;
+    padding: 24px 0 0 0;
+}
+.no_access .price_right .title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    padding: 36px 0 18px 0;
+}
+/* CONFIDENTIALITY */
+.confident{
+    padding: 48px 0;
+}
+.confident .confident_block{
+    padding: 32px;
+    border: 4px solid rgba(47, 85, 212, 0.8);
+    box-shadow: 8px 8px 0px #2F55D4;
+    border-radius: 12px;
+}
+.confident .confident_block .conf_item{
+    margin-bottom: 18px;
+    list-style: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 24px 0px;
+}
+.confident .confident_block .conf_item:first-child{
+    padding: 0 0 24px;
+}
+.confident .confident_block .conf_item:last-child{
+    margin-bottom: 0px;
+    padding: 24px 0 0 0;
+    border: none;
+}
+.confident_block .conf_item li{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    color: #7C7C7C;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+.confident_block .conf_item li::before{
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 14px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #7C7C7C;
+}
+.confident_block .conf_item li:first-child::before{
+    display: none;
+}
+.confident_block .conf_item .conf_title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 10px;
+}
+.confident_block .conf_item .conf_desc{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    color: #7C7C7C;
+}
+.confident_block .conf_item li:first-child{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;padding:  0 0 10px 0;
+    color: #000000;
+}
+.confident_block .conf_item li span{
+    color: #2F55D4;
+}
+.confident_block .buttons{
+    padding: 24px 0 0 0;
+}
+.confident_block .buttons .btn_{
+    display: inline-flex;
+}
+
+/* 404 PAGE ERROR */
+.error{
+    padding: 95px 0;
+}
+.error .error_row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 136px;
+}
+.error_row .error_title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 54px;
+    padding: 24px 0;
+}
+.error_row .btn_{
+    display: inline-flex;
+}
+.error_row .btn_ img{
+    rotate: 180deg;
+}
+
+/* AUTH */
+.auth .btn_ img{
+    rotate: 0deg;
+}
+.auth .error_title{
+    font-weight: 700;
+    padding: 0 0 24px 0;
+}
+
+/* CERTIFICATE */
+
+.certificate{
+    padding: 100px 0 48px 0;
+}
+.certificate .certificat_row{
+    display: flex;
+    align-items: flex-start;
+    gap: 38px;
+}
+.certificate .certificat_row .certificat{    
+    background-image: url(img/certificate_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #2F55D4;
+    border: 4px solid rgba(47, 85, 212, 0.8);
+    box-shadow: 8px 8px 0px #2F55D4;
+    border-radius: 12px;
+    position: relative;
+}
+.certificate .certificat_row .certificat .signature_frame{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.certificat_row .certificat .cert_head{
+    padding: 84px 72px 36px 72px;
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 88px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+.certificat_row .certificat .full_name{
+    text-align: center;
+    background: #FFFFFF;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 88px;
+    color: #FC4F24;
+    padding: 12px 0 14px 0;
+    position: relative;
+}
+.certificat_row .certificat .full_name .btn_{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    translate: 0% -50%;
+}
+.certificat_row .certificat .full_name .full_name_frame{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+.certificat_row .certificat .cert_info{
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 46px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 36px 0 88px 0;
+}
+.certificat_row .certificat .cert_footer{
+    padding: 0 72px 86px 72px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.certificat .cert_footer .numbers{
+    display: flex;
+    gap: 48px;
+}
+.certificat .cert_footer .numbers .num{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    padding: 0 0 12px 0;
+    color: #fff;
+}
+.certificat .cert_footer .footer_text{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 38px;
+    color: #fff;
+}
+.certificat .cert_footer .signature{
+    border-top: 2.5px solid #FFFFFF;
+    padding: 12px 0 0 0;
+    margin: 0 50px 0 0;
+}
+.certificate .actions{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 33px 25px 40px 22px;
+    border: 4px solid rgba(47, 85, 212, 0.8);
+    box-shadow: 8px 8px 0px #2F55D4;
+    border-radius: 12px;
+}
+.certificate .actions .btn_{
+    display: inline-flex;
+    justify-content: center;
+}
+.certificate .actions .url_link{
+    overflow-y: auto;
+    background: #FFFFFF;
+    border: 2px solid #2F55D4;
+    border-radius: 12px;
+    padding: 12px;
+    color: #2F55D4;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: 328px;
+    height: 44px;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.certificate .actions .url_link::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 1560px){
+    .no_access .slider2{
+        width: 45%;
+    }
+    .no_access .price_right{
+        width: 55%;
+    }
+    .certificat_row .certificat .cert_head{
+        font-size: 42px;
+        line-height: 54px;
+        padding: 60px 50px 30px 50px;
+        gap: 15px;
+    }
+    .certificat_row .certificat .cert_head img{
+        width: 100px;
+    }
+    .certificat_row .certificat .full_name{
+        font-size: 45px;
+        line-height: 70px;
+        padding: 12px 0 14px 0;
+    }
+    .certificat_row .certificat .full_name .full_name_frame{
+        width: 190px;
+    }
+    .certificat_row .certificat .full_name .btn_{
+        right: 2%;
+    }
+    .certificat_row .certificat .cert_info{
+        font-size: 35px;
+        line-height: 46px;
+        padding: 30px 0 65px 0;
+    }
+    .certificat .cert_footer .numbers .num{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .certificat .cert_footer .footer_text{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .certificat_row .certificat .cert_footer{
+        padding: 0 50px 86px 50px;
+    }
+    .certificate .certificat_row .certificat .signature_frame{
+        width: 100px;
+    }
+    .certificate .actions .url_link{
+        width: 280px;
+    }
+
+    /* ERROR 404 PAGE */
+    .error .error_image{
+        width: 520px;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px){
+    .btn_{
+        font-size: 18px;
+        line-height: 22px;
+    }    
+    .about_block .about_item{
+        width: calc(50% - 18px);        
+        padding-left: 40px;
+    }
+    
+    /* Возмощности */
+    .possibility_row .about_block{
+        gap: 36px;
+    }
+    .courses .certificat .tooltip_{
+        width: 400px;
+    }
+    .courses .certificat img{
+        width: 400px;
+    }
+    .courses .sale{
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+
+    /*  PRICE */
+    .price .price_row{
+        gap: 50px;
+    }
+    .slider2{
+        width: 45%;
+    }
+    .price .price_right {
+        width: 55%;
+    }
+    .price .price_right .table_{
+        flex-wrap: wrap;
+    }
+    .price_right .table_ .table_col{
+        width: 50%;
+    }
+
+    /* 404 PAGE ERROR */
+    .error {
+        padding: 48px 0;
+    }
+    .error .error_image{
+        width: 500px;
+    }
+    .error .error_row{
+        gap: 60px;
+    }
+    .error_row .error_title{
+        font-size: 38px;
+        line-height: 40px;
+        padding: 18px 0;
+    }
+
+    /* CERTIFICATE */
+    .certificat_row .certificat .cert_head {
+        font-size: 32px;
+        line-height: 34px;
+        padding: 40px 30px 30px 30px;        
+    }
+    .certificat_row .certificat .cert_head img {
+        width: 80px;
+    }
+    .certificat_row .certificat .full_name {
+        font-size: 34px;
+        line-height: 50px;        
+    }
+    .certificat_row .certificat .full_name .full_name_frame {
+        width: 160px;
+        top: 55%;
+    }
+    .certificat_row .certificat .full_name .btn_ {        
+        padding: 10px 12px;
+        gap: 6px;
+    }
+    .certificat_row .certificat .full_name .btn_ img{
+        width: 16px;
+    }
+    .certificat_row .certificat .cert_info {
+        font-size: 23px;
+        line-height: 23px;
+        padding: 40px 0 40px 0;
+    }
+    .certificat .cert_footer .numbers .num {
+        font-size: 33px;
+        line-height: 33px;
+        padding: 0;
+    }
+    .certificat .cert_footer .footer_text {
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .certificat .cert_footer .numbers {        
+        gap: 30px;
+    }
+    .certificat_row .certificat .cert_footer {
+        padding: 0 30px 30px 30px;
+    }
+    .certificate .certificat_row .certificat .signature_frame {
+        width: 90px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .phone_telegram{
+        width: 229px;
+        height: 460px;
+    }
+    .title {        
+        font-size: 54px;
+        line-height: 62px;
+        padding: 8px 0 20px 0;
+    }
+    .title.small {
+        font-size: 46px;
+        line-height: 56px;
+    }
+    .desc{
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .possibility, .telegram, .courses, .rates, .comments{
+        padding: 56px 0;
+    }
+    /* HEADER */
+    header{
+        padding: 28px 0;
+    }
+    header .header_row .header_nav{
+        gap: 28px;
+    }
+    .header_nav a{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    /* ChatGPT в России */
+    .hero{
+        padding: 58px 0 114px 0;
+    }
+    .hero .hero_row{
+        gap: 48px;
+    }
+    /* Возмощности */
+    
+    .possibility .possibility_row{
+        gap: 32px;
+        padding: 48px 0 0 0;
+    }
+    .possibility_row .about_block{
+        gap: 32px;
+    }
+    .about_block .about_item {
+        width: calc(50% - 16px);
+        padding-left: 30px;
+    }
+    .about_block .about_item .about_title{
+        font-size: 22px;
+        line-height: 24px;           
+    }
+    .about_block .about_item .about_desc{
+        font-size: 18px;
+        line-height: 22px;        
+    }
+    .about_block .about_item img{
+        width: 20px;
+        height: 20px;
+    }
+    /* ChatGPT в Telegram */    
+    .telegram .telegram_row{
+        padding: 48px 0 0 0;
+        gap: 32px;
+    }    
+    .telegram_item .telegram_title{
+        font-size: 32px;
+        line-height: 40px; 
+    }
+    .telegram .telegram_row a{
+        font-size: 28px;
+        line-height: 33px;
+    }
+    /* Курсы ChatGPT */
+    .courses .courses_row{
+        gap: 32px;
+        flex-direction: column;
+        padding: 48px 0 18px 0;
+    }
+    .slides .slide .slide_head{
+        padding: 24px 60px 24px 24px;
+    }
+    .slides .slide .slide_body{
+        padding: 0px 24px 24px 20px;
+    }
+    .courses .courses_row .certificat{
+        text-align: center;
+    }
+    .courses .certificat img {
+        width: 70%;
+    }
+    .courses .certificat .tooltip_ {
+        width: 100%;
+    }
+    .courses .sale{
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* Все тарифы */
+    .rates .rates_row{
+        padding: 48px 0 0 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .rates .rates_row .rate{
+        width: calc(50% - 10px);
+    }
+    /* Любимый продуктом людей */
+    .comments .comments_row{
+        padding: 48px 0 0 0;
+    }
+    .comments_row .comment{
+        width: calc(50% - 10px);
+        padding: 20px 24px;
+    }
+    .comments_row .comment .comment_body{
+        font-size: 22px;
+        line-height: 32px;
+    }    
+    /* FOOTER */
+    footer{
+        padding: 28px 0;
+    }
+
+
+    /* KURS */
+    .price {
+        padding: 33px 0 54px 0;
+    }
+    header .header_row .header_left{
+        gap: 36px;
+    }
+    header .header_row .header_left .logo img{
+        width: 125px;
+    }
+    .header_left .breadcrumb{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .header_left .breadcrumb::before{
+        height: 36px;
+        left: -18px;
+    }
+    header .header_row .header_nav {
+        gap: 20px;
+    }
+    .header_nav.kurs a{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .slider2 {
+        width: 100%;
+    }
+    .price .price_right {
+        width: 100%;
+    }
+    .price .price_row{
+        flex-direction: column-reverse;
+    }
+    /* NO ACCESS */
+    .no_access .price_row{
+        flex-direction: column;
+        gap: 163px;
+    }
+    .no_access .price_row .price_right{
+        width: 100%;
+    }
+    .no_access .price_row .slider2{
+        width: 100%;
+    }
+
+     /* 404 ERROR PAGE */
+     .error_row .error_title {
+        font-size: 30px;
+        line-height: 34px;
+        padding: 16px 0;
+    }
+    .error .error_image {
+        width: 350px;
+    }    
+
+    /* AUTH */
+    .auth .error_row {
+        gap: 40px;
+    }
+    /* CERTIFICATE */
+    .certificate {
+        padding: 50px 0 40px 0;
+    }
+    .certificate .certificat_row{
+        flex-direction: column;
+    }
+    .certificat_row .certificat{
+        width: 100%;
+    }
+    .certificat_row .certificat .cert_head{
+        font-size: 41px;
+    }
+    .certificat_row .certificat .cert_head img{
+        width: 100px;
+    }
+    .certificat_row .certificat .full_name{
+        font-size: 45px;
+        line-height: 70px;
+        padding: 12px 0 14px 0;
+    }
+    .certificat_row .certificat .full_name .full_name_frame{
+        width: 190px;
+    }
+    .certificat_row .certificat .full_name .btn_{
+        right: 2%;
+    }
+    .certificat_row .certificat .cert_info{
+        font-size: 35px;
+        line-height: 46px;
+        padding: 40px 0 50px 0;
+    }
+    .certificat .cert_footer .numbers .num{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .certificat .cert_footer .footer_text{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .certificat_row .certificat .cert_footer{
+        padding: 0px 50px 60px 50px;
+    }
+    .certificate .certificat_row .certificat .signature_frame{
+        width: 100px;
+    }
+    .certificate .actions .url_link{
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .title {
+        font-size: 38px;
+        line-height: 56px;        
+    }
+    .title.small{
+        font-size: 38px;
+    }
+    .btn_ {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .phone_telegram{
+        width: 324px;
+        height: 621px;
+    }
+    /* HEADER */
+    header {
+        padding: 14px 0;
+    }
+    header .header_row .logo img{
+        width: 137px;
+        height: 34px;
+    }
+    header .header_row ul li{
+        display: none;
+    }
+    header .header_row ul li:last-child{
+        display: flex;
+    }
+    /* ChatGPT в России */
+    .hero {
+        padding: 28px 0 36px 0;
+    }
+    .hero .hero_row{
+        flex-direction: column;
+    }
+    .hero_row .title {
+        padding: 8px 0 12px 0;
+    }
+    .hero_row .desc{
+        padding: 0 0 20px 0;
+    }
+    /* Возмощности */
+    .possibility{
+        padding: 48px 0;
+    }
+    .possibility .possibility_row{
+        padding: 36px 0 0 0;
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+    .about_block .about_item .about_title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .about_block .about_item .about_desc {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    /* ChatGPT в Telegram */
+    .telegram{
+        padding: 28px 0 36px 0;
+    }
+    .telegram .telegram_row {
+        padding: 14px 0 0 0;
+        gap: 36px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .telegram_item .telegram_title {
+        font-size: 28px;
+        line-height: 34px;
+        padding: 0 0 12px 0;
+    }
+    /* Курсы ChatGPT */
+    .courses{
+        padding: 60px 0 48px 0;
+    }
+    .courses .courses_row{
+        padding: 36px 0 18px 0;
+        gap: 18px;
+    }    
+    .slides .slide .slide_head{
+        font-size: 22px;
+        line-height: 27px;
+        padding: 15px 45px 15px 18px;
+    }
+    .slides .slide .slide_head::before{
+        right: 16px;
+    }
+    .slides .slide .slide_head::after{
+        right: 31px;
+    }
+    .slides .slide .slide_body{
+        padding: 8px 18px 18px 18px;
+        margin: 0 0 0 25px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .slides .slide .slide_body li{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .courses .certificat .tooltip_{
+        padding: 18px;        
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 32px;
+    }
+    .courses .sale{
+        padding: 18px 18px 36px 18px;
+        font-size: 31px;
+        line-height: 38px;
+    }
+    .courses .sale .prices{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;        
+    }
+    .courses .sale .prices .sale_price{
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    /* Все тарифы */
+    .rates{
+        padding: 28px 0 36px 0;
+    }
+    .rates .rates_row{
+        padding: 28px 0 0 0;
+        gap: 18px;
+    }
+    .rates .rates_row .rate{
+        width: 100%;
+    }
+    .rates_row .rate .rate_header{
+        padding: 0 0 18px 0;
+    }
+    .rates_row .rate .rate_price{
+        padding: 0 0 18px 0;
+    }
+    .rates_row .rate ul li{
+        padding: 0 0 14px 46px;
+    }
+    .rates_row .rate ul {
+        padding: 0 0 18px 0;
+    }
+    /* Любимый продуктом людей */
+    .comments{
+        padding: 48px 0;
+    }
+    .comments .comments_row {
+        padding: 24px 0 0 0;
+        gap: 12px;
+    }
+    .comments_row .comment{
+        width: 100%;
+        padding: 18px;
+    }
+    .comments_row .comment .comment_body{
+        line-height: 30px;
+    }
+    .comments_row .comment .user{
+        gap: 20px;
+    }
+    /* FOOTER */
+    footer{
+        padding: 22px 0;
+        font-weight: 500;
+    }
+    footer .privacy{
+        font-weight: 600;
+        text-decoration-line: underline;
+    }
+
+    /* KURS */
+    .price {
+        padding: 32px 0 72px 0;
+    }
+    .price .price_row .title {
+        font-size: 38px;
+        line-height: 44px;
+        padding: 0 0 18px 0;
+    }
+    .price .price_row .desc {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .price .price_right ul{
+        padding: 18px 0 18px 18px;
+    }
+    .price .price_right ul li {     
+        line-height: 26px;
+        font-size: 18px;
+    }
+    .price .price_right .concept{
+        margin: 0 0 18px 0;
+    }
+    .price .price_right .concept img{
+        width: 30px;
+        height: 30px;
+    }
+    .price .price_right .buttons{
+        gap: 18px;
+        padding: 24px 0 0 0;
+    }
+    .price .price_row .slider2{
+        display: none;
+    }
+
+    /* NO ACCESS */
+    .no_access .price_row .slider2{
+        display: block;
+        padding: 18px 32px;
+    }
+    .no_access .price_row .price_right .no_acces_image{
+        width: 418px;
+        height: 305px;
+    }
+    .no_access .price_right .title{
+        padding: 24px 0 18px 0;
+    }    
+
+    /* CONFIDENT */
+    .confident{
+        padding: 24px 0 48px 0;
+    }
+    .confident .confident_block {
+        padding: 18px;
+    }
+   
+    /* 404 ERROR PAGE */
+    .error {
+        padding: 48px 0;
+    }
+    .error_row .error_title {
+        font-size: 32px;
+        line-height: 34px;
+        padding: 12px 0 18px 0;
+    }
+    .error .error_row {
+        gap: 36px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .error .error_image {
+        width: 100%;
+    }
+    .error_row .btn_ {
+        display: flex;
+        justify-content: center;
+    }
+    /* AUTH */
+    .auth .error_title{
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 38px;
+        padding: 0px 0 18px 0;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    /* Возмощности */
+    .possibility_row .about_block{
+        gap: 42px;
+    }
+    .about_block .about_item img {
+        width: 24px;
+        height: 24px;
+    }
+    .about_block .about_item {
+        width: 100%;
+        padding-left: 49px;
+    }
+    .about_block .about_item img{
+        top: 3px;
+    }
+    .courses .certificat img {
+        width: 100%;
+    }
+    /* PRICE */
+    .price_right .table_ .table_col {
+        width: 100%;
+    }
+    .price_right .table_ .table_td{
+        display: none;
+        padding: 12px 0;
+    }
+    .price_right .table_ .table_td:first-child{
+        display: block;
+        border: none;
+        padding-bottom: 0;
+    }
+    .price_right .table_ .table_td:nth-child(2){
+        display: block;
+        padding-top: 0;
+    }
+    .price .price_right .buttons{
+        flex-direction: column;
+    }
+    .price_right .buttons .btn_{
+        width: 100%;
+        justify-content: center;
+    }
+    header .header_row .header_left .logo img {
+        width: 100px;
+        height: 24px;
+    }
+    header .header_row .header_left {
+        gap: 24px;
+    }
+    .header_left .breadcrumb::before {
+        height: 36px;
+        left: -12px;
+    }
+    /* NO ACCESS */
+    .no_access .buttons .btn_{
+        width: max-content;
+    }
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 576px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1560px){
+    .container{
+        max-width: 1540px;
+    }
+}
